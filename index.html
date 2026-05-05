@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Uygulamaya Yonlendiriliyorsunuz...</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        (function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            var iosLink = "https://apps.apple.com/tr/app/caff%C3%A8-di-stelvio/id6762609970?l=tr";
+            var androidLink = "https://play.google.com/store/apps/details?id=com.nextresta.caffedistelvio";
+            var defaultLink = "https://play.google.com/store/apps/details?id=com.nextresta.caffedistelvio";
+
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.replace(iosLink);
+            } else if (/android/i.test(userAgent)) {
+                window.location.replace(androidLink);
+            } else {
+                window.location.replace(defaultLink);
+            }
+        })();
+    </script>
+    <p>Yönlendiriliyorsunuz, lütfen bekleyin...</p>
+</body>
+</html>
